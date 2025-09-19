@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:localizador_app/ui/core/theme/theme.dart';
+import 'package:localizador_app/ui/core/ui/login_button.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -13,10 +14,12 @@ class HomeScreen extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              Image(
-                image: ResizeImage(
-                  FileImage(File('assets/img/logo.png')),
-                  width: MediaQuery.of(context).size.width ~/ 2,
+              SizedBox(height: size.height * 0.1),
+              SizedBox(
+                height: size.height * 0.2,
+                child: FittedBox(
+                  fit: BoxFit.fill,
+                  child: Image.asset('assets/img/logo.png'),
                 ),
               ),
               SizedBox(height: 10),
@@ -24,8 +27,16 @@ class HomeScreen extends StatelessWidget {
                 'LOCALIZADOR',
                 style: TextStyle(
                   color: Colors.white,
-                  fontWeight: FontWeight.w600,
+                  fontSize: size.width * 0.08,
+                  fontWeight: FontWeight.w900,
                 ),
+              ),
+              SizedBox(height: 100),
+              LoginButton(
+                color: Colors.white,
+                textColor: corInstitucional,
+                text: 'Entrar',
+                onPressed: () {},
               ),
             ],
           ),

@@ -13,8 +13,8 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: corInstitucional,
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: size.height * 0.1),
               SizedBox(
                 height: size.height * 0.2,
                 child: FittedBox(
@@ -22,7 +22,6 @@ class HomeScreen extends StatelessWidget {
                   child: Image.asset('assets/img/logo.png'),
                 ),
               ),
-              SizedBox(height: 10),
               Text(
                 'LOCALIZADOR',
                 style: TextStyle(
@@ -31,16 +30,13 @@ class HomeScreen extends StatelessWidget {
                   fontWeight: FontWeight.w900,
                 ),
               ),
-              SizedBox(height: 100),
-              LoginButton(
-                color: Colors.white,
-                textColor: corInstitucional,
-                text: 'Entrar',
-                onPressed: () {},
-              ),
+
+              //SizedBox(height: size.height * 0.3),
             ],
           ),
         ),
+
+        
       ),
     );
   }
